@@ -17,7 +17,7 @@ body .container {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: hsl(240deg, 5%, 91%);
+  background-color: white;
   border-radius: 23px;
   padding: 30px;
   margin-top: 100px;
@@ -30,6 +30,15 @@ body .container .bg {
   position: relative;
   bottom: 175px;
 }
+body .container .bg .woman-desktop {
+  display: none;
+}
+body .container .bg .pattern-desktop {
+  display: none;
+}
+body .container .bg .box {
+  display: none;
+}
 body .container .bg .woman {
   width: 100%;
   position: relative;
@@ -40,13 +49,6 @@ body .container .bg .pattern {
   position: relative;
   top: -40px;
 }
-body .container h1 {
-  margin-top: -90px;
-  margin-bottom: 20px;
-  color: hsl(238deg, 29%, 16%);
-  font-weight: 700;
-  font-size: 2.2em;
-}
 body .container .container-question {
   width: 100%;
   height: 100%;
@@ -55,36 +57,157 @@ body .container .container-question {
   flex-direction: column;
   gap: 15px;
 }
-body .container .container-question h2 {
-  font-size: 1em;
+body .container .container-question h1 {
+  text-align: center;
+  margin-top: -120px;
+  margin-bottom: 20px;
+  color: hsl(238deg, 29%, 16%);
+  font-weight: 700;
+  font-size: 2.2em;
 }
-body .container .container-question h3 {
+body .container .container-question .summary {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: hsl(238deg, 29%, 16%);
+  font-weight: 700;
+  text-align: start;
+  font-size: 1em;
+  list-style: none;
+}
+body .container .container-question .summary:hover {
+  color: hsl(238deg, 29%, 16%);
+  cursor: pointer;
+}
+body .container .container-question p {
+  margin-top: 10px;
   font-size: 0.8em;
+}
+body .container .container-question p:hover {
+  color: hsl(14deg, 88%, 65%);
+  cursor: pointer;
 }
 body .container .container-question .question {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   margin-bottom: 10px;
 }
 body .container .container-question .question .flecha {
   width: 12px;
   height: 10px;
 }
-body .container .container-question .respuesta {
-  margin-bottom: 10px;
-  line-height: 1.5;
-  margin-right: 60px;
-  display: none;
+body .container .container-question .question[open] .flecha {
+  transform: rotate(180deg);
+  transition: 300ms;
 }
-
-footer .attribution {
+body .container .container-question .flecha {
+  transition: 300ms;
+}
+body footer .attribution {
   margin: 30px 0;
-  font-size: 12px;
+  font-size: 1em;
   text-align: center;
   color: aliceblue;
 }
-footer .attribution a {
+body footer .attribution a {
   color: hsl(0deg, 34%, 85%);
   text-decoration: none;
+}
+
+@media screen and (min-width: 720px) {
+  body .container {
+    width: 600px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  body .container .bg {
+    display: block;
+    position: relative;
+    top: 0;
+    right: 90px;
+  }
+  body .container .bg .woman {
+    display: none;
+  }
+  body .container .bg .pattern {
+    display: none;
+  }
+  body .container .bg .box {
+    display: flex;
+    position: relative;
+    z-index: 1;
+    top: 59px;
+    right: 20px;
+    width: 120px;
+  }
+  body .container .bg .woman-desktop {
+    display: flex;
+    position: absolute;
+    width: 274px;
+    top: -29px;
+    overflow-y: hidden;
+  }
+  body .container .bg .pattern-desktop {
+    display: flex;
+    position: absolute;
+    bottom: -28px;
+    z-index: 0;
+    width: 267px;
+  }
+  body .container .container-question {
+    width: 70%;
+    height: 70%;
+  }
+  body .container .container-question h1 {
+    margin-top: -20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body .container {
+    width: 924px;
+    padding: 40px;
+  }
+  body .container .bg {
+    width: 100%;
+  }
+  body .container .bg .woman-desktop {
+    width: 400px;
+    top: -80px;
+  }
+  body .container .bg .pattern-desktop {
+    width: 400px;
+    bottom: -80px;
+    overflow: hidden;
+  }
+  body .container .bg .box {
+    width: 180px;
+    top: 30px;
+    right: 10px;
+  }
+  body .container .container-question {
+    width: 100%;
+    margin: 50px 0;
+  }
+  body .container .container-question h1 {
+    margin-top: -30px;
+    font-size: 3em;
+  }
+  body .container .container-question .summary {
+    font-size: 1.3em;
+  }
+  body .container .container-question p {
+    font-size: 1em;
+  }
+  body .container .container-question .question .flecha {
+    width: 20px;
+    height: 15px;
+  }
+  body footer .attribution {
+    font-size: 1.3em;
+  }
 }/*# sourceMappingURL=style.css.map */

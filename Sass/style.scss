@@ -33,7 +33,15 @@ body{
             flex-direction: column;
             position: relative;
             bottom: 175px;
-        
+            .woman-desktop{
+                display: none;
+            }
+            .pattern-desktop{
+                display: none;
+            }
+            .box{
+                display: none;
+            }
             .woman{
                 width: 100%;
                 position: relative;
@@ -51,17 +59,11 @@ body{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: $Lightgrayishblue;
+        background-color: white;
         border-radius: 23px;
         padding: 30px;
         margin-top:100px;
         
-        h1{margin-top: -90px;
-            margin-bottom: 20px;
-            color: $Verydarkdesaturatedblue;
-            font-weight: 700;
-            font-size: 2.2em
-        }
     
         .container-question{
             width: 100%;
@@ -70,50 +72,80 @@ body{
             display: flex;
             flex-direction: column;
             gap: 15px;
-            h2{
-                font-size: 1em;
+        
+        
+            h1{
+                text-align: center;
+                margin-top: -120px;
+                margin-bottom: 20px;
+                color: $Verydarkdesaturatedblue;
+                font-weight: 700;
+                font-size: 2.2em;
+
             }
-            h3{
+            
+            .summary{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                
+                color: $Verydarkdesaturatedblue;
+                font-weight: 700;
+                text-align: start;
+                font-size: 1em;
+                list-style: none;
+            }
+            .summary:hover{
+                color:$Verydarkdesaturatedblue;
+                cursor: pointer;
+            }
+        
+        
+            p{
+                margin-top: 10px;
                 font-size: 0.8em;
+            }
+            p:hover{
+                color:$Softred;
+                cursor: pointer;
             }
 
             .question{
                 display: flex;
+                flex-direction: column;
                 align-items: center;
-                justify-content: space-between;
+                justify-content: center;
                 margin-bottom: 10px;
                 
                 .flecha{
                     width: 12px;
                     height: 10px;
+                    
+                }
+
+                
+            }
+            .question[open]{
+                .flecha{
+                    transform: rotate(180deg);
+                    transition: 300ms;
                 }
             }
-            .respuesta{
-                margin-bottom: 10px;
-                line-height: 1.5;
-                margin-right: 60px;
-                display: none;
+            .flecha{
+                transition: 300ms;
             }
+        
         }
     }
-}
-
-
-
-
-
-
-
-
-
-
 
 
 footer{
     
     .attribution { 
         margin:30px 0;
-        font-size: 12px; 
+        font-size: 1em; 
         text-align: center;
         color: aliceblue; 
         a {
@@ -123,3 +155,132 @@ footer{
         }
 
 }
+}
+@media screen and (min-width:720px) {
+
+    body{
+
+        .container{
+
+            width: 600px;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            
+            
+
+            .bg{
+                display: block;
+                position: relative;
+                top: 0;
+                right: 90px;
+                .woman{
+                    display: none;
+                }
+                .pattern{
+                    display: none;
+                } 
+
+                .box{
+                    display: flex;
+                    position: relative;
+                    z-index: 1;
+                    top: 59px;
+                    right: 20px;
+                    width: 120px;
+                }
+
+                .woman-desktop{
+                    display: flex;
+                    position: absolute;
+                    width: 274px;
+                    top: -29px;
+                    overflow-y: hidden;
+                }
+                .pattern-desktop{
+                    display: flex;
+                    position: absolute;
+                    bottom: -28px;
+                    z-index: 0;
+                    width: 267px;
+                }
+            }
+
+            .container-question{
+                h1{
+                    margin-top: -20px;
+                }
+                width: 70%;
+                height: 70%;
+
+
+            }
+        }
+
+    }
+    
+}
+
+@media screen and (min-width:1200px) {
+
+    body{
+    .container{
+        width: 924px;
+        
+        padding: 40px;
+        .bg{
+            width: 100%;
+
+            .woman-desktop{
+                width: 400px;
+                top: -80px;
+            }
+            .pattern-desktop{
+                width: 400px;
+                bottom: -80px;
+            
+                overflow: hidden;
+            }
+            .box{
+                width: 180px;
+                top: 30px;
+                right: 10px;
+            }
+        }
+
+        .container-question{
+            
+            width: 100%;
+            margin: 50px 0;
+
+            h1{
+                margin-top: -30px;
+                font-size: 3em;
+            }
+
+            .summary{
+                font-size: 1.3em;
+
+            }
+            p{
+                font-size: 1em;
+            }
+            .question{
+                .flecha{
+                    width: 20px;
+                    height: 15px;
+                }
+            }
+        }
+            
+        }
+        footer{
+            .attribution{
+                font-size: 1.3em;
+            }
+        }
+    }
+ 
+}
+
+
