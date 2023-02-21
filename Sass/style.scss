@@ -1,0 +1,122 @@
+@import url(/Sass/cssreload.css);
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
+
+$Verydarkdesaturatedblue: hsl(238, 29%, 16%);
+$Softred: hsl(14, 88%, 65%);
+
+$Softviolet: hsl(273, 75%, 66%);
+$Softblue: hsl(240, 73%, 65%);
+
+$Verydarkgrayishblue: hsl(237, 12%, 33%);
+$Darkgrayishblue: hsl(240, 6%, 50%);
+
+$Lightgrayishblue: hsl(240, 5%, 91%);
+
+
+body{
+    background-image: linear-gradient($Softviolet, $Softblue) ;
+    min-height: 100vh;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8em;
+    font-family: 'Kumbh Sans';
+    color: $Darkgrayishblue;
+
+    .bg{
+        width: 235px;
+        height: 175px;
+        display: flex;
+        flex-direction: column;
+    
+        .woman{
+            width: 100%;
+            position: relative;
+            top:40px;
+        }
+        .pattern{
+            width: 100%;
+            position: relative;
+            top: -40px;
+        }
+
+    }
+    .container{
+        width: 330px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $Lightgrayishblue;
+        border-radius: 23px;
+        padding: 20px;
+        
+        h1{
+            margin-top: 80px;
+            margin-bottom: 20px;
+            color: $Verydarkdesaturatedblue;
+            font-weight: 700;
+            font-size: 2.2em
+        }
+    
+        .container-question{
+            width: 100%;
+            height: 100%;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            h2{
+                font-size: 1em;
+            }
+            h3{
+                font-size: 0.8em;
+            }
+
+            .question{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 10px;
+                
+                .flecha{
+                    width: 12px;
+                    height: 10px;
+                }
+            }
+            .respuesta{
+                margin-bottom: 10px;
+                line-height: 1.5;
+                margin-right: 60px;
+                display: none;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+    
+    .attribution { 
+        margin:30px 0;
+        font-size: 12px; 
+        text-align: center;
+        color: aliceblue; 
+        a {
+            color: hsl(0, 34%, 85%);
+            text-decoration: none;
+            }
+        }
+
+}

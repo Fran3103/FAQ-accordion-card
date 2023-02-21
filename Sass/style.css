@@ -1,0 +1,87 @@
+@import url(/Sass/cssreload.css);
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Open+Sans:wght@400;700&display=swap");
+body {
+  background-image: linear-gradient(hsl(273deg, 75%, 66%), hsl(240deg, 73%, 65%));
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8em;
+  font-family: "Kumbh Sans";
+  color: hsl(240deg, 6%, 50%);
+}
+body .bg {
+  width: 235px;
+  height: 175px;
+  display: flex;
+  flex-direction: column;
+}
+body .bg .woman {
+  width: 100%;
+  position: relative;
+  top: 40px;
+}
+body .bg .pattern {
+  width: 100%;
+  position: relative;
+  top: -40px;
+}
+body .container {
+  width: 330px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(240deg, 5%, 91%);
+  border-radius: 23px;
+  padding: 20px;
+}
+body .container h1 {
+  margin-top: 80px;
+  margin-bottom: 20px;
+  color: hsl(238deg, 29%, 16%);
+  font-weight: 700;
+  font-size: 2.2em;
+}
+body .container .container-question {
+  width: 100%;
+  height: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+body .container .container-question h2 {
+  font-size: 1em;
+}
+body .container .container-question h3 {
+  font-size: 0.8em;
+}
+body .container .container-question .question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+body .container .container-question .question .flecha {
+  width: 12px;
+  height: 10px;
+}
+body .container .container-question .respuesta {
+  margin-bottom: 10px;
+  line-height: 1.5;
+  margin-right: 60px;
+  display: none;
+}
+
+footer .attribution {
+  margin: 30px 0;
+  font-size: 12px;
+  text-align: center;
+  color: aliceblue;
+}
+footer .attribution a {
+  color: hsl(0deg, 34%, 85%);
+  text-decoration: none;
+}/*# sourceMappingURL=style.css.map */
